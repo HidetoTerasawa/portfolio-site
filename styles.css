@@ -1,0 +1,77 @@
+* {
+  /*outline: 1px solid orange; /*領域視覚化。完成したらコメントアウトする*/
+  box-sizing: border-box; /*とりあえず各要素の幅が会うようになるプロパティ*/
+}
+
+img {
+  width: 100%;
+}
+body {
+  background-image: url(pexels-chu-wang-1591916937-27376082.jpg);
+  background-attachment: fixed; /* 背景画像を固定してスクロールに追従させない */
+  margin: 0; /*要素の余白とパディングを0にして、不要なスペースをなくします。*/
+  padding: 0; /*要素の余白とパディングを0にして、不要なスペースをなくします。*/
+  background-size: cover; /*画像が常にコンテナの大きさに応じて拡大・縮小され、背景全体を覆うように設定します。*/
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /*ビューポートの高さ全体（100%）を指定します。*/
+  padding: 20px;
+}
+
+div {
+  width: 500px;
+  background-color: rgb(224, 225, 220);
+  color: black;
+  margin: auto; /*要素の位置　水平方向のみ中央にする*/
+  padding: 30px; /*要素の周りの余白*/
+}
+
+h1,
+p {
+  text-align: center; /*要素内に入ってるテキストを指定して位置を調整する*/
+}
+
+form > label > input,/*フォームタグの中のラベルタグの中のインプットタグ*/
+select,
+textarea {
+  display: block; /*インライン要素をブロック要素へと変える*/
+  padding: 6px;
+  border-radius: 3px;
+}
+
+form > label > input,
+textarea {
+  width: 100%;
+}
+
+#submit {
+  width: 100%;
+  background-color: rgb(10, 10, 0);
+  color: white;
+  border-radius: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#submit:hover {
+  background-color: rgb(121, 224, 187);
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+.margin-bottom {
+  margin-bottom: 12px;
+}
+
+form > label,
+legend {
+  font-weight: bold;
+  color: rgb(65, 63, 63);
+}
+
+#description {
+  text-align: center;
+}

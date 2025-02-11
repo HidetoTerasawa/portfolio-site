@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>survey-form.freecodecamp.rocks</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div>
+      <h1 id="title">お客様の声アンケート</h1>
+      <p id="description">
+        アンケート調査にご協力いただきありがとうございます。この情報を基によりよいサービスが提供できるよう努力してまいります。
+      </p>
+      <form id="survey-form">
+        <label id="name-label">
+          名前<input
+            class="margin-bottom"
+            id="name"
+            name="name"
+            type="text"
+            placeholder="例：田中 太一"
+            required
+          />
+        </label>
+
+        <label id="email-label">
+          メール<input
+            class="margin-bottom"
+            id="email"
+            name="email"
+            type="email"
+            placeholder="例：abc@XXX.com"
+            required
+          />
+        </label>
+
+        <label id="number-label">
+          年齢(任意)<input
+            class="margin-bottom"
+            id="number"
+            name="number"
+            type="number"
+            min="10"
+            max="100"
+            placeholder="例：24"
+            required
+          />
+        </label>
+
+        <label for="role">
+          あなたの現在の職務を最もよく表す選択肢はどれですか？
+          <select id="dropdown" name="role" class="margin-bottom">
+            <option value="">職業を選択する</option>
+            <option value="1">学生</option>
+            <option value="2">正社員</option>
+            <option value="3">勤労学生</option>
+            <option value="4">回答しない</option>
+            <option value="5">その他</option>
+          </select>
+        </label>
+
+        <fieldset>
+          <legend>当店舗を知人に勧めますか？</legend>
+          <!--ラジオボタンを関連付けするにはname属性の値を同じものにする。-->
+          <label for="definitely">
+            勧める<input
+              id="definitely"
+              type="radio"
+              name="recommend"
+              class="inline"
+              value="1"
+              checked
+            />
+          </label>
+
+          <label for="maybe">
+            どちらでもない<input
+              id="maybe"
+              type="radio"
+              name="recommend"
+              class="inline"
+              value="2"
+            />
+          </label>
+
+          <label for="not-sure">
+            勧めない<input
+              class="margin-bottom"
+              id="not-sure"
+              type="radio"
+              name="recommend"
+              value="3"
+            />
+          </label>
+        </fieldset>
+
+        <label class="favo" for="favorite">
+          最も良いのは何ですか？
+          <select id="favorite" name="favorite">
+            <option value="">オプションを選択</option>
+            <option value="1">商品数</option>
+            <option value="2">従業員の接客態度</option>
+            <option value="3">衛生面</option>
+            <option value="4">特にない</option>
+          </select>
+        </label>
+
+        <fieldset>
+          <p>
+            どのような点を改善してほしいですか？(該当するものをすべてチェックしてください)
+          </p>
+          <label
+            ><input
+              class="inline"
+              type="checkbox"
+              required
+              value="b"
+            />商品の質</label
+          ><br />
+          <label
+            ><input
+              class="inline"
+              type="checkbox"
+              required
+              value="a"
+            />接客態度</label
+          ><br />
+          <label
+            ><input
+              class="inline"
+              type="checkbox"
+              value="1"
+              required
+            />商品のレパートリー</label
+          ><br />
+          <label
+            ><input
+              class="inline"
+              type="checkbox"
+              required
+              value="2"
+            />清掃</label
+          ><br />
+          <label
+            ><input
+              class="inline"
+              type="checkbox"
+              required
+              value="3"
+            />営業時間</label
+          ><br />
+          <label
+            ><input
+              class="inline"
+              type="checkbox"
+              required
+              value="4"
+            />駐車場</label
+          ><br />
+          <label
+            ><input
+              class="inline"
+              type="checkbox"
+              required
+              value="5"
+            />店内BGM</label
+          ><br />
+          <label
+            ><input
+              class="inline"
+              type="checkbox"
+              required
+              value="6"
+            />商品の配置</label
+          ><br />
+          <label
+            ><input
+              class="inline"
+              type="checkbox"
+              required
+              value="7"
+            />子供向けの商品の数</label
+          ><br />
+          <label
+            ><input
+              class="inline"
+              type="checkbox"
+              required
+              value="8"
+            />大人向け商品の数</label
+          ><br />
+          <label
+            ><input
+              class="margin-bottom"
+              type="checkbox"
+              required
+              value="9"
+            />シニア向け商品の数</label
+          ><br />
+        </fieldset>
+
+        <label for="comments">
+          疑問や提案はありますか？
+          <textarea
+            class="margin-bottom"
+            id="comments"
+            name="comments"
+            rows="4"
+            cols="30"
+            placeholder="コメントを入力してください"
+          ></textarea>
+        </label>
+        <input id="submit" type="submit" value="送信する" />
+      </form>
+    </div>
+  </body>
+</html>
